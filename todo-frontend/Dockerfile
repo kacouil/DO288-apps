@@ -17,6 +17,7 @@ RUN touch /run/nginx.pid && chgrp -R nginx /var/log/nginx /run/nginx.pid && chmo
 COPY src/ /usr/share/nginx/html
 
 EXPOSE 8080
+LABEL io.openshift.expose-services="8080:http"
 
 USER nginx
 
